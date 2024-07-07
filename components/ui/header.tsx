@@ -15,17 +15,19 @@ export const Header = ({ navigationItems, logo, actionLinks }: HeaderProps) => {
 
         <NavigationItems {...navigationItems} />
 
-        {actionLinks.map(({ children, size, target, url, variant }) => (
-          <TextLink
-            url={url}
-            size={size}
-            target={target}
-            variant={variant}
-            key={url}
-          >
-            {children}
-          </TextLink>
-        ))}
+        <div className="gap-4 flex">
+          {actionLinks.map(({ children, size, target, url, variant }) => (
+            <TextLink
+              url={url}
+              size={size}
+              target={target}
+              variant={variant}
+              key={url}
+            >
+              {children}
+            </TextLink>
+          ))}
+        </div>
       </div>
     </header>
   );
