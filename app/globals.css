@@ -74,3 +74,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes flipIn {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOut {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+.flip-in {
+  animation: flipIn 0.3s both;
+}
+
+.flip-out {
+  animation: flipOut 0.3s both;
+}
