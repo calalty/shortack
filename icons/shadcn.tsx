@@ -10,7 +10,6 @@ export const ShadcnIcon = (props: SVGProps<SVGSVGElement>) => (
   >
     <path d='M0 0h256v256H0z' stroke='none' />
     <path
-      stroke={props.fill}
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth='16'
