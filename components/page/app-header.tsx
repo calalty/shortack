@@ -7,6 +7,7 @@ import Link from 'next/link';
 export const AppHeader = () => (
   <Header
     navigationItems={{
+      additionalClassName: 'hover:font-bold',
       items: [
         {
           title: 'Docs',

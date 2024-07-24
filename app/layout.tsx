@@ -18,6 +18,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang='en'>
+      <head>
+        <link rel='icon' href='/app/favicon.ico' />
+      </head>
       <body className={inter.className}>
         <AppHeader />
         <Providers session={session}>{children}</Providers>
