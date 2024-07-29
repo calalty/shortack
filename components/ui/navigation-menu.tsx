@@ -133,7 +133,7 @@ export type NavigationItemsProps = {
     children?: React.ReactNode;
     link?: { url: string; name: string };
   }[];
-  additionalClassName: string;
+  additionalClassName?: string;
 };
 export const NavigationItems = ({ items, additionalClassName }: NavigationItemsProps) => {
   return (

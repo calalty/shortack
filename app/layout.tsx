@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Darker_Grotesque } from 'next/font/google';
+import { Schibsted_Grotesk } from 'next/font/google';
 
 import Providers from './providers';
 import './globals.css';
 import { getSession } from '@/auth';
 import { AppHeader } from '@/components/page/app-header';
 
-const inter = Darker_Grotesque({ subsets: ['latin'] });
+const inter = Schibsted_Grotesk({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'shrtstack',

@@ -9,7 +9,7 @@ export type HeaderProps = {
 };
 export const Header = ({ navigationItems, logo, actionLinks }: HeaderProps) => {
   return (
-    <header className='flex justify-center p-6 py-4 absolute top-0 right-0 left-0 bg-white/50 border shadow-sm backdrop-blur-lg'>
+    <header className='flex justify-center p-6 py-4 absolute top-0 right-0 left-0 bg-white shadow-sm border-b-2 border-black'>
       <div className='flex w-full items-center justify-between max-w-[1080px] gap-8'>
         {logo}
 

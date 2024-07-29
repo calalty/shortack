@@ -1,9 +1,9 @@
 'use client';
 
 import { AWSIcon } from '@/icons/aws';
-import { MySQLIcon } from '@/icons/mysql';
+import { Neon } from '@/icons/neon';
 import { NextIcon } from '@/icons/next';
-import { PostgreSQLIcon } from '@/icons/postgresql';
+import { PlanetScale } from '@/icons/planetscale';
 import { ResendIcon } from '@/icons/resend';
 import { SanityIcon } from '@/icons/sanity';
 import { ShadcnIcon } from '@/icons/shadcn';
@@ -49,17 +49,15 @@ const features = [
     url: 'https://v2.tailwindcss.com/docs'
   },
   {
-    title: <MySQLIcon className={`group-hover:fill-my-sql ${iconBaseClass}`} width={44} />,
-    value: 'MySQL,',
-    color: 'text-my-sql',
+    title: <PlanetScale className={iconBaseClass} width={44} />,
+    value: 'PlanetScale,',
+    color: 'text-black',
     url: 'https://dev.mysql.com/doc/'
   },
   {
-    title: (
-      <PostgreSQLIcon className={`group-hover:fill-postgre-sql ${iconBaseClass}`} width={44} />
-    ),
-    value: 'PostgreSQL,',
-    color: 'text-postgre-sql',
+    title: <Neon className={`group-hover:fill-neon ${iconBaseClass}`} width={44} />,
+    value: 'Neon,',
+    color: 'text-neon',
     url: 'https://www.postgresql.org/docs/'
   },
   {

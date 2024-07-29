@@ -1,15 +1,15 @@
-import { Header } from "@/components/ui/header";
-import { Shortack } from "@/icons/shortack";
-import { navigationMenuMock } from "@/mocks/navigation-menu.mock";
-import type { Meta, StoryObj } from "@storybook/react";
+import { Header } from '@/components/ui/header';
+import { Shortack } from '@/icons/shortack';
+import { mockNavigationMenu } from '@/mocks/navigation-menu.mock';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Header> = {
-  title: "Organisms/Header",
+  title: 'Organisms/Header',
   component: Header,
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
-  tags: ["autodocs"],
+  tags: ['autodocs']
 };
 
 export default meta;
@@ -20,8 +20,8 @@ export const Default: Story = {
   args: {
     logo: <Shortack />,
     navigationItems: {
-      items: navigationMenuMock,
+      items: mockNavigationMenu
     },
-    actionLinks: [{ variant: "default", children: "Default", url: "#" }],
-  },
+    actionLinks: [{ variant: 'default', children: 'Default', url: '#' }]
+  }
 };
