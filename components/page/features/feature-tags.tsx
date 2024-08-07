@@ -1,18 +1,19 @@
 'use client';
 
-import { AWSIcon } from '@/icons/aws';
-import { Neon } from '@/icons/neon';
-import { NextIcon } from '@/icons/next';
-import { PlanetScale } from '@/icons/planetscale';
-import { ResendIcon } from '@/icons/resend';
-import { SanityIcon } from '@/icons/sanity';
-import { ShadcnIcon } from '@/icons/shadcn';
-import { ShieldIcon } from '@/icons/shield';
-import { StorybookIcon } from '@/icons/storybook';
-import { StripeIcon } from '@/icons/stripe';
-import { TailwindCssIcon } from '@/icons/tailwindcss';
-import { TypescriptIcon } from '@/icons/typescript';
-import { VercelIcon } from '@/icons/vercel';
+import React from 'react';
+import { AWSIcon } from '../../../icons/aws';
+import { Neon } from '../../../icons/neon';
+import { NextIcon } from '../../../icons/next';
+import { PlanetScale } from '../../../icons/planetscale';
+import { ResendIcon } from '../../../icons/resend';
+import { SanityIcon } from '../../../icons/sanity';
+import { ShadcnIcon } from '../../../icons/shadcn';
+import { ShieldIcon } from '../../../icons/shield';
+import { StorybookIcon } from '../../../icons/storybook';
+import { StripeIcon } from '../../../icons/stripe';
+import { TailwindCssIcon } from '../../../icons/tailwindcss';
+import { TypescriptIcon } from '../../../icons/typescript';
+import { VercelIcon } from '../../../icons/vercel';
 
 import { useState } from 'react';
 
@@ -131,14 +132,14 @@ export const FeatureTags = () => {
   return (
     <div
       onMouseLeave={() => handleMouseEvent()}
-      className='grid grid-cols-1 md:grid-cols-5 m-8 border border-black/10'
+      className='grid grid-cols-1 md:grid-cols-5 m-auto border border-black/10 container p-0'
     >
       <div className='col-span-1 md:col-span-2 border border-black/10 p-5'>
         <div className='h-full w-full flex items-center justify-center'>
-          <h2 className='text-left text-3xl'>
+          <h2 className='text-left text-3xl font-black'>
             Your
             <span
-              className={`${animationClass} ${hoveredColor} relative inline-block font-black ml-[0.35rem]`}
+              className={`${animationClass} ${hoveredColor} relative inline-block font-bold ml-[0.35rem]`}
             >
               <span className='absolute left-0 -bottom-[0.4rem]'>{hoveredValue}</span>
             </span>
