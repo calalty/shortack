@@ -9,11 +9,12 @@ import React, { useState } from 'react';
 import { HamburgerMenu } from './hamburger-menu';
 import { signIn } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
+import { URLS } from '@/consts/urls';
 
 export const AppHeader = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const pathname = usePathname();
-  const REDUCED_HEADER_FOOTER_URLS = ['/login'];
+  const REDUCED_HEADER_FOOTER_URLS = [URLS.LOGIN, URLS.SIGN_UP];
 
   return (
     <>

@@ -1,23 +1,31 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-interface FormValues {
-  fullName: string;
+type FormValues = {
+  name: string;
   email: string;
   password: string;
-}
+};
 
-const formInputs: Array<'email' | 'password'> = ['email', 'password'];
+type FormKeys = keyof FormValues;
 
-const labels: Record<'email' | 'password', string> = {
+const formInputs: Array<FormKeys> = ['name', 'email', 'password'];
+
+const labels: Record<FormKeys, string> = {
+  name: 'Full name',
   email: 'Email',
   password: 'Password'
 };
 
 export const AuthForm: React.FC = () => {
+  const pathname = usePathname();
+
   const {
     register,
     handleSubmit,
@@ -28,18 +36,21 @@ export const AuthForm: React.FC = () => {
     console.log(data);
   };
 
+  const filteredInputs =
+    pathname === '/signup' ? formInputs : formInputs.filter(input => input !== 'name');
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className='space-y-6'>
-        {formInputs.map(value => (
+        {filteredInputs.map(value => (
           <div key={value}>
             <Label htmlFor={value}>{labels[value]}</Label>
             <Input
               className='mt-1'
               id={value}
-              {...register(value as keyof FormValues, { required: `${labels[value]} is required` })}
+              {...register(value, { required: `${labels[value]} is required` })}
             />
-            {errors[value] && <p className='text-red-600 mt-1'>{errors[value]?.message}</p>}
+            {errors[value] && <p className='text-red-600 mt-1 text-sm'>{errors[value]?.message}</p>}
           </div>
         ))}
       </div>
