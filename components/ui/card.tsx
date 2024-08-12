@@ -6,7 +6,7 @@ const CardRoot = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn('rounded-xl border bg-card text-card-foreground shadow', className)}
+      className={cn(`rounded-xl border bg-card text-card-foreground shadow ${className}`)}
       {...props}
     />
   )
@@ -85,4 +85,4 @@ const Card = ({ content, footer, additionalClassNames, description, title }: Car
   </CardRoot>
 );
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+export { Card, CardRoot, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };

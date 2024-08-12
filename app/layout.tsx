@@ -21,10 +21,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
         <link rel='icon' href='/app/favicon.ico' />
       </head>
-      <body className={inter.className}>
-        <AppHeader />
-        <Providers session={session}>{children}</Providers>
-      </body>
+      <Providers session={session}>
+        <body className={inter.className}>
+          <AppHeader />
+          {children}
+        </body>
+      </Providers>
     </html>
   );
 }

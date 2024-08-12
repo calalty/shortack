@@ -1,7 +1,7 @@
 import { TextLink } from '../../ui/link';
 import Image from 'next/image';
 import theStack from '../../../images/the-stack.png';
-import { Pancake } from '../../../icons/pancake';
+
 import React from 'react';
 
 export const Hero = () => {

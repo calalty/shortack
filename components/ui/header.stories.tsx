@@ -22,6 +22,6 @@ export const Default: Story = {
     navigationItems: {
       items: mockNavigationMenu
     },
-    actionLinks: [{ variant: 'default', children: 'Default', url: '#' }]
+    actionLinks: [{ variant: 'default', children: 'Default', onClick: () => false }]
   }
 };

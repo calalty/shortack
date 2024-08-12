@@ -1,6 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Tabs, TabsProps } from './tabs';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardRoot,
+  CardTitle
+} from './card';
 import { Button } from './button';
 import { Label } from './label';
 import { Input } from './input';
@@ -30,7 +38,7 @@ export const Default: Story = {
         label: 'Account',
         value: 'account',
         children: (
-          <Card>
+          <CardRoot>
             <CardHeader>
               <CardTitle>Account</CardTitle>
               <CardDescription>
@@ -50,14 +58,14 @@ export const Default: Story = {
             <CardFooter>
               <Button>Save changes</Button>
             </CardFooter>
-          </Card>
+          </CardRoot>
         )
       },
       {
         label: 'Password',
         value: 'password',
         children: (
-          <Card>
+          <CardRoot>
             <CardHeader>
               <CardTitle>Password</CardTitle>
               <CardDescription>
@@ -77,7 +85,7 @@ export const Default: Story = {
             <CardFooter>
               <Button>Save password</Button>
             </CardFooter>
-          </Card>
+          </CardRoot>
         )
       }
     ]

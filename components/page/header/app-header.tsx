@@ -7,13 +7,18 @@ import { Header } from '../../ui/header';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { HamburgerMenu } from './hamburger-menu';
+import { signIn } from 'next-auth/react';
+import { usePathname } from 'next/navigation';
 
 export const AppHeader = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+  const REDUCED_HEADER_FOOTER_URLS = ['/login'];
 
   return (
     <>
       <Header
+        reducedHeader={REDUCED_HEADER_FOOTER_URLS.some(path => pathname === path)}
         menu={<HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
         navigationItems={{
           items: [
@@ -55,13 +60,15 @@ export const AppHeader = () => {
           ]
         }}
         actionLinks={[
-          { variant: 'secondary', children: 'Sign up', url: '/signup' },
-          { variant: 'shortstack', children: 'Sign in', url: '/signin' }
+          { variant: 'secondary', children: 'Sign up', onClick: () => signIn() },
+          { variant: 'shortstack', children: 'Sign in', onClick: () => signIn() }
         ]}
         logo={<Shortack />}
       />
 
-      {isOpen && <nav className='fixed inset-0 top-[3.625rem] bg-white flex flex-col z-50'></nav>}
+      {isOpen && (
+        <nav className='md:hidden fixed inset-0 top-[3.625rem] bg-white flex flex-col z-50'></nav>
+      )}
     </>
   );
 };

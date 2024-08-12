@@ -5,6 +5,7 @@ const config = {
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
+    './layout/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}'
   ],
@@ -79,7 +80,6 @@ const config = {
         'resend': '#4169E1',
         'vercel': '#4B0082',
         'storybook': '#ff4685',
-        'sanity': '#f36458',
         'aws': '#ff9c15'
       },
       borderRadius: {

@@ -35,8 +35,7 @@ export const Pricing = () => (
             variant: 'secondary',
             size: 'lg',
             url: '/subscribe/basic',
-            icon: <Pancake className='h-3 mt-[1px] fill-black' />,
-            label: 'Start Stacking'
+            label: 'start stack'
           }
         }}
       />
@@ -67,8 +66,7 @@ export const Pricing = () => (
             variant: 'shortstack',
             size: 'lg',
             url: '/subscribe/pro',
-            icon: <Pancake className='h-3 mt-[1px] fill-white' />,
-            label: 'Start Stacking'
+            label: 'start stack'
           }
         }}
       />
