@@ -5,14 +5,14 @@ import { Pancake } from '@/icons/pancake';
 
 export const Pricing = () => (
   <section className='w-full m-auto py-28'>
-    <h1 className='text-center font-bold md:text-5xl mb-8'>
+    <h1 className='text-center font-semibold md:text-5xl mb-8'>
       Choose The Stack <br /> That <span className='text-shortstack-primary'>Works</span> For You
     </h1>
     <div className='max-w-4xl flex w-full m-auto gap-8'>
       <PricingCard
         additionalClassNames={{
           root: 'w-full',
-          description: 'text-4xl font-bold text-black mt-2 pb-4 border-b-2 border-secondary',
+          description: 'text-4xl font-semibold text-black mt-2 pb-4 border-b-2 border-secondary',
           header: 'pb-0 px-6 pt-6 mb-4'
         }}
         title='Basic Plan'
@@ -43,7 +43,7 @@ export const Pricing = () => (
       <PricingCard
         additionalClassNames={{
           root: 'w-full',
-          description: 'text-4xl font-bold text-black mt-2 pb-4 border-b-2 border-secondary',
+          description: 'text-4xl font-semibold text-black mt-2 pb-4 border-b-2 border-secondary',
           header: 'pb-0 px-6 pt-6 mb-4'
         }}
         title='Pro Plan'

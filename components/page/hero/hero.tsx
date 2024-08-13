@@ -3,17 +3,18 @@ import Image from 'next/image';
 import theStack from '../../../images/the-stack.png';
 
 import React from 'react';
+import { StackIcon } from '@radix-ui/react-icons';
 
 export const Hero = () => {
   return (
-    <section className='h-[calc(100vh+4.625rem)] flex flex-col justify-center items-center mx-auto max-w-6xl px-6 sm:px-12'>
-      <div className='text-center flex flex-col items-center'>
-        <h1 className='font-bold text-6xl md:text-8xl'>
-          your stack, <br className='md:hidden' />{' '}
+    <section className='flex flex-col justify-center items-center mx-auto max-w-6xl px-6 sm:px-12 pt-48'>
+      <div className='text-center flex flex-col items-center relative'>
+        <h1 className='font-semibold text-6xl md:text-8xl tracking-tight'>
+          Build in a Weekend. <br className='md:hidden' /> Your Stack,
           <span className='md:ml-6 relative'>
-            shorter.
+            Shorter.
             <svg
-              className='absolute -bottom-1 left-0 w-full fill-shortstack-primary'
+              className='absolute -bottom-2 left-0 w-full fill-shortstack-primary'
               viewBox='0 0 120 9'
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -22,12 +23,12 @@ export const Hero = () => {
           </span>
         </h1>
 
-        <p className='mt-8 md:text-2xl md:max-w-xl max-w-xs opacity-75'>
+        <p className='mt-8 font-light md:text-2xl md:max-w-xl max-w-xs opacity-75'>
           focus on innovation, and let us handle the rest.
         </p>
         <div className='mt-8 flex justify-center gap-4'>
           <TextLink className='gap-2 md:text-2xl py-6' variant='shortstack' size='lg' url='/'>
-            start stack
+            <StackIcon className='h-6 w-6 mt-1' /> Start Stack
           </TextLink>
         </div>
       </div>

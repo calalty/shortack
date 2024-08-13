@@ -97,15 +97,6 @@
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -0.15rem;
-}
-
 .flip-in {
   animation: flipIn 0.3s both;
 }

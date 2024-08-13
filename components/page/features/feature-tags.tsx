@@ -136,10 +136,10 @@ export const FeatureTags = () => {
     >
       <div className='col-span-1 md:col-span-2 border border-black/10 p-5'>
         <div className='h-full w-full flex items-center justify-center'>
-          <h2 className='text-left text-3xl font-black'>
+          <h2 className='text-left text-3xl tracking-tighter font-semibold'>
             Your
             <span
-              className={`${animationClass} ${hoveredColor} relative inline-block font-bold ml-[0.35rem]`}
+              className={`${animationClass} ${hoveredColor} relative inline-block font-semibold ml-[0.35rem]`}
             >
               <span className='absolute left-0 -bottom-[0.4rem]'>{hoveredValue}</span>
             </span>
