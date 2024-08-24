@@ -56,7 +56,7 @@ CardFooter.displayName = 'CardFooter';
 export type CardProps = {
   content: React.ReactNode;
   footer?: React.ReactNode;
-  title?: string;
+  title?: React.ReactNode | string;
   description?: string;
   additionalClassNames?: {
     root?: string;
@@ -80,7 +80,7 @@ const Card = ({ content, footer, additionalClassNames, description, title }: Car
         )}
       </CardHeader>
     )}
-    <CardContent className={additionalClassNames?.content}>{content}</CardContent>
+    {content && <CardContent className={additionalClassNames?.content}>{content}</CardContent>}
     {footer && <CardFooter className={additionalClassNames?.footer}>{footer}</CardFooter>}
   </CardRoot>
 );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { PricingCard } from './pricing-card';
+import { PricingCard } from '../../ui/pricing-card';
 import { CheckCircledIcon, CheckIcon, Cross1Icon, CrossCircledIcon } from '@radix-ui/react-icons';
 import { Pancake } from '@/icons/pancake';
 

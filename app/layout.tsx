@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Space_Grotesk } from 'next/font/google';
 
 import Providers from './providers';
 import './globals.css';
 import { getSession } from '@/auth';
 import { AppHeader } from '@/components/page/header/app-header';
+import { GuideLines } from '@/components/page/hero/guide-lines';
 
 export const metadata: Metadata = {
   title: 'shrtstack',

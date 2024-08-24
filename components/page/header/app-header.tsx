@@ -10,6 +10,7 @@ import { HamburgerMenu } from './hamburger-menu';
 import { signIn } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
 import { URLS } from '@/consts/urls';
+import { ArrowRightIcon } from 'lucide-react';
 
 export const AppHeader = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -61,8 +62,17 @@ export const AppHeader = () => {
           ]
         }}
         actionLinks={[
-          { variant: 'secondary', children: 'Sign up', onClick: () => signIn() },
-          { variant: 'shortstack', children: 'Sign in', onClick: () => signIn() }
+          {
+            variant: 'default',
+            size: 'lg',
+            className: 'rounded-full',
+            children: (
+              <span className='flex items-center gap-2'>
+                Sign in <ArrowRightIcon className='h-5 w-5' />
+              </span>
+            ),
+            onClick: () => signIn()
+          }
         ]}
         logo={<Shortack />}
       />

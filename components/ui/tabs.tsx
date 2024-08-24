@@ -59,7 +59,7 @@ export type TabsProps = {
     label: string;
     children: React.ReactNode;
   }[];
-  additionalClassNames: {
+  additionalClassNames?: {
     tabsRoot?: string;
     tabsList?: string;
     tabsTrigger?: string;
@@ -67,10 +67,10 @@ export type TabsProps = {
 };
 
 const Tabs = ({ defaultValue, tabs, additionalClassNames }: TabsProps) => (
-  <TabsRoot defaultValue={defaultValue} className={additionalClassNames.tabsRoot}>
-    <TabsList className={additionalClassNames.tabsList}>
+  <TabsRoot defaultValue={defaultValue} className={additionalClassNames?.tabsRoot}>
+    <TabsList className={additionalClassNames?.tabsList}>
       {tabs.map(({ value, label }) => (
-        <TabsTrigger className={additionalClassNames.tabsTrigger} key={value} value={value}>
+        <TabsTrigger className={additionalClassNames?.tabsTrigger} key={value} value={value}>
           {label}
         </TabsTrigger>
       ))}

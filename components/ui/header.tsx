@@ -1,6 +1,5 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement } from 'react';
 import { NavigationItems, NavigationItemsProps } from './navigation-menu';
-import { TextLink, TextLinkProps } from './link';
 import { Button, ButtonProps } from './button';
 
 export type HeaderProps = {
@@ -19,7 +18,7 @@ export const Header = ({
 }: HeaderProps) => {
   return (
     <header
-      className={`flex mx-auto p-6 py-4 top-0 right-0 left-0 bg-white shadow-sm border-b-2 border-black fixed z-[999] ${reducedHeader && 'border-secondary py-6'}`}
+      className={`flex mx-auto p-6 py-4 top-0 right-0 left-0 absolute z-[999] justify-center ${reducedHeader && 'border-secondary py-6'}`}
     >
       <div className='flex w-full items-center justify-between max-w-[90rem] gap-8'>
         {logo}
@@ -30,8 +29,9 @@ export const Header = ({
             <div className='md:contents hidden'>
               <NavigationItems {...navigationItems} />
               <div className='gap-4 flex'>
-                {actionLinks.map(({ children, size, onClick, variant }) => (
+                {actionLinks.map(({ children, size, onClick, variant, className }) => (
                   <Button
+                    className={className}
                     onClick={onClick}
                     size={size}
                     variant={variant}

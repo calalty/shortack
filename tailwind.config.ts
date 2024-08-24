@@ -67,7 +67,7 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
-        'shortstack-primary': '#474aff',
+        'shortstack-primary': '#FDFD96',
         'shortstack-secondary': '#D2691E',
         'shortstack-background': '#FFF7E1',
         'shortstack-foreground': '#5C4033',
