@@ -1,7 +1,6 @@
 import React from 'react';
 import { PricingCard } from '../../ui/pricing-card';
-import { CheckCircledIcon, CheckIcon, Cross1Icon, CrossCircledIcon } from '@radix-ui/react-icons';
-import { Pancake } from '@/icons/pancake';
+import { CheckCircledIcon, CrossCircledIcon } from '@radix-ui/react-icons';
 
 export const Pricing = () => (
   <section className='w-full m-auto py-28'>

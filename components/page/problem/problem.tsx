@@ -1,6 +1,7 @@
 import React from 'react';
-import { ZapIcon } from 'lucide-react';
+import { AlertTriangle, CheckCircleIcon, ZapIcon } from 'lucide-react';
 import { Tabs } from '@/components/ui/tabs';
+import { LightningBoltIcon } from '@radix-ui/react-icons';
 
 const painPoints = [
   { description: 'Set up emails', time: '4 hrs' },
@@ -26,12 +27,12 @@ export const Problem = () => {
   return (
     <section className='bg-gradient-to-t from-secondary to-white'>
       <div className='container px-4 text-center max-w-6xl mx-auto pb-32'>
-        <div className='mb-20'>
-          <h2 className='font-semibold text-3xl md:text-6xl mb-12'>
-            Solve your startup's pain points, <br />
-            <ZapIcon className='fill-shortstack-primary inline-block' size='40' /> in one download
+        <div className='flex flex-col gap-6 mb-20'>
+          <h2 className='flex items-center bg-primary gap-2 text-white font-normal w-min py-2 px-6 rounded-full mx-auto'>
+            <LightningBoltIcon className='h-5 w-5' /> Surge
           </h2>
-          <p className='text-xl text-primary/75 max-w-[48rem] mx-auto'>
+          <p className='text-3xl text-center'>Instant Impact</p>
+          <p className='text-xl font-light opacity-75 max-w-lg mx-auto'>
             Discover how our solution simplifies your startup journey by addressing common
             challenges effectively. See the difference with our pre-built features designed to save
             you time and effort.
@@ -47,7 +48,11 @@ export const Problem = () => {
           tabs={[
             {
               value: 'pain',
-              label: 'Pain Points',
+              label: (
+                <span className='flex items-center gap-2'>
+                  <AlertTriangle size={16} /> Pain Points
+                </span>
+              ),
               children: (
                 <ul className='flex flex-col mx-auto gap-3 p-6 bg-red-100 rounded-2xl w-[28rem] shadow-md'>
                   {painPoints.map(({ description, time }) => (
@@ -63,7 +68,11 @@ export const Problem = () => {
             },
             {
               value: 'pain-free',
-              label: 'Pain Free',
+              label: (
+                <span className='flex items-center gap-2'>
+                  <CheckCircleIcon size={16} /> Pain Free
+                </span>
+              ),
               children: (
                 <ul className='flex flex-col mx-auto gap-3  p-6 bg-green-100 rounded-2xl w-[28rem] shadow-md'>
                   {painFreeSolutions.map(({ description, time }) => (

@@ -8,7 +8,7 @@ export const Features = () => {
         <h2 className='flex items-center bg-primary gap-2 text-white font-normal w-min py-2 px-6 rounded-full mx-auto'>
           <MapIcon className='h-5 w-5' /> Solution
         </h2>
-        <p className='text-3xl text-center'>Powerful Features.</p>
+        <p className='text-3xl text-center'>Powerful Features</p>
         <p className='text-xl font-light opacity-75 text-center max-w-lg mx-auto'>
           Effortlessly build and scale with a robust stack, featuring intuitive tools for seamless
           app development.

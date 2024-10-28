@@ -17,7 +17,7 @@ import { VercelIcon } from '../../../icons/vercel';
 
 import { useState } from 'react';
 
-const TEXT_SHORTSTACK_PRIMARY = 'text-shortstack-primary';
+const TEXT_SHORTSTACK_PRIMARY = 'text-shortstack-default';
 const DEFAULT_HOVER_TEXT = 'Tech,';
 
 const iconBaseClass = 'fill-black transition-all duration-500';
@@ -110,7 +110,7 @@ const features = [
   }
 ];
 
-export const FeatureTags = () => {
+export const TechTags = () => {
   const [hoveredValue, setHoveredValue] = useState<string>(DEFAULT_HOVER_TEXT);
   const [animationClass, setAnimationClass] = useState<string>('');
   const [hoveredColor, setHoveredColor] = useState<string>(TEXT_SHORTSTACK_PRIMARY);
@@ -132,7 +132,7 @@ export const FeatureTags = () => {
   return (
     <div
       onMouseLeave={() => handleMouseEvent()}
-      className='grid grid-cols-1 md:grid-cols-5 m-auto border border-black/10 container p-0'
+      className='grid grid-cols-1 md:grid-cols-5 m-auto border border-black/10 p-0 w-[64rem]'
     >
       <div className='col-span-1 md:col-span-2 border border-black/10 p-5'>
         <div className='h-full w-full flex items-center justify-center'>

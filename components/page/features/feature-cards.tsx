@@ -58,13 +58,13 @@ export const FeatureCards = () => {
   const columns = [features.slice(0, sliceIndex), features.slice(sliceIndex)];
 
   return (
-    <div className='flex mx-auto max-w-screen-lg gap-x-2'>
+    <div className='flex mx-auto max-w-screen-lg gap-x-4'>
       {columns.map((column, index) => (
-        <div key={index} className='flex flex-col w-full md:w-1/2 gap-y-6'>
+        <div key={index} className='flex flex-col w-full md:w-1/2 gap-y-4'>
           {column.map(({ content, description, title, additionalClassNames }) => (
             <FeaturesCard
               additionalClassNames={{
-                root: 'shadow-inner shadow-md border-none',
+                root: 'border-none shadow-all-lg',
                 title: 'flex items-center gap-2 text-xl font-normal',
                 header: 'gap-1 max-w-80'
               }}

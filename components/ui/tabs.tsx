@@ -56,7 +56,7 @@ export type TabsProps = {
   defaultValue: string;
   tabs: {
     value: string;
-    label: string;
+    label: string | React.ReactNode;
     children: React.ReactNode;
   }[];
   additionalClassNames?: {
